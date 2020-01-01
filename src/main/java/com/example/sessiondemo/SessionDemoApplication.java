@@ -31,7 +31,7 @@ public class SessionDemoApplication {
 		ret.put("username", principal.getName());
 		return ret;
 	}
-	@RequestMapping("/logout")
+	@RequestMapping(value = "/logout")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void logout(HttpSession session) {
 		session.invalidate();
