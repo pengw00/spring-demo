@@ -15,9 +15,4 @@ public class HttpSessionConfig extends AbstractHttpSessionApplicationInitializer
     public LettuceConnectionFactory connectionFactory() {
         return new LettuceConnectionFactory();
     }
-
-    @Bean
-    public HttpSessionIdResolver httpSessionIdResolver(){
-        return HeaderHttpSessionIdResolver.xAuthToken();
-    }
 }
